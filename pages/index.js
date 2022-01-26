@@ -51,7 +51,7 @@ export default function PaginaInicial() {
                 styleSheet={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     backgroundColor: appConfig.theme.colors.primary[500],
-                    backgroundImage: 'url(https://cdn.dribbble.com/users/1162077/screenshots/4382009/media/d643bde8b59f34ef2d69c96696d4414c.gif)',
+                    backgroundImage: `url(${appConfig.backgroundImage})`,
                     backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 }}
             >
@@ -107,7 +107,7 @@ export default function PaginaInicial() {
                         />
 
                         <Legend>{username.length >= 3 || 'O usuário deve ter 3 ou mais caracteres'}</Legend>
-                        
+
                         <Button
                             type='submit'
                             label='Entrar'
@@ -144,7 +144,7 @@ export default function PaginaInicial() {
                                 borderRadius: '50%',
                                 marginBottom: '16px',
                             }}
-                            src={username.length >=3 ? `https://github.com/${username}.png` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/No_icon_red.svg/582px-No_icon_red.svg.png'}
+                            src={username.length >= 3 ? `https://github.com/${username}.png` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/No_icon_red.svg/582px-No_icon_red.svg.png'}
                         />
                         <Text
                             variant="body4"
@@ -155,7 +155,7 @@ export default function PaginaInicial() {
                                 borderRadius: '1000px'
                             }}
                         >
-                            {username.length >=3 ? username : ''}
+                            {username.length >= 3 ? username : ''}
                         </Text>
                     </Box>
                     {/* Photo Area */}
